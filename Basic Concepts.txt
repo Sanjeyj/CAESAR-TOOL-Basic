@@ -1,0 +1,43 @@
+Basic Concepts:
+
+Plaintext  :  The original message that you want to encrypt.
+Ciphertext :  The encrypted message.
+Key        :  A number that indicates how many positions each letter in the plaintext should be shifted to get the ciphertext.
+Encryption :  The process of converting plaintext into ciphertext.
+Decryption :  The process of converting ciphertext back into plaintext.
+
+
+In a Caesar Cipher, the key is the number of positions each letter of the plaintext is shifted.
+
+How It Works:
+
+Encryption  : The encrypt() function loops through each character of the plaintext. If it's an alphabetical character, it shifts it forward in the alphabet by the specified key. If it's not a letter (like spaces or punctuation), it adds the character without modification.
+
+Decryption  : The decrypt() function calls the encrypt() function with a negative shift (i.e., moving letters backward) to reverse the encryption.
+
+Key         : The key is the number of positions by which the letters are shifted. For example, a key of 3 will shift A to D.
+
+
+Example:
+
+
+Encrypting:
+
+Input message     : "HELLO WORLD"
+Key               : 3
+Encrypted message : "KHOOR ZRUOG"
+
+
+Decrypting:
+
+Input ciphertext  : "KHOOR ZRUOG"
+Key               :  3
+Decrypted message : "HELLO WORLD"
+
+
+Enhancements:
+  Support for a more complex algorithm like AES, or integrating a library such as cryptography can make this more robust.
+Handle more error cases (e.g., invalid input for keys, ensuring proper alphabet-only handling).
+
+
+This is a basic example to help you understand encryption and decryption using one of the simplest techniques in cryptography.
